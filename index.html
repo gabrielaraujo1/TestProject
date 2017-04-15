@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="A Litlle of Motivation for the day">
+		<meta name="keywords" content="inspiration, motivation,">
+
+		<title>Motivator</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script>
+		
+			// Our List of Thoughts
+			var thoughts = [
+				'“Success is going from failure to failure without losing enthusiasm.”',
+				'“Success is doing ordinary things extraordinarily well.”',
+				'“When a man feels throbbing within him the power to do what he undertakes as well as it can possibly be done, this is happiness, this is success.”',
+				'“Seventy percent of success in life is showing up.”',
+				'“Fear regret more than failure.”',
+				'“For true success ask yourself these four questions: Why? Why not? Why not me? Why not now?”'
+			];
+
+			// Our List of Successp People
+			var successfullpeople = [
+				'Winston Churchill',
+				'Jim Rohn',
+				'Orison Swett Marden',
+				'Woody Allen',
+				'Taryn Rose',
+				'James Allen'
+			];
+
+			var username = prompt("Please enter your name");
+			var originalusername
+
+			/* As my arrays have a length of 6, username.length never can be more than 6 digits*/
+
+			if(username.length >= 7){
+				originalusername = username;
+				username = "123456";
+			}
+			else{
+				originalusername = username;
+			}
+					
+			
+			var randomNumber = Math.floor(Math.random()*username.length);
+
+			
+			var thoughtselected = thoughts[randomNumber];
+			var successfullpeopleselected = successfullpeople[randomNumber];
+
+			document.write("<h1>" + thoughtselected + "</h1>");
+			document.write("<h2>" + successfullpeopleselected + "</h2>");
+			document.write("<h3>Let's change the world " + originalusername + ".</h3>")
+
+
+
+		</script>
+	</head>
+	<body>
+		<!-- PAGE CONTENT WILL BE PRINTED HERE --> 
+	</body>
+</html>
